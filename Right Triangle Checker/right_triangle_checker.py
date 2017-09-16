@@ -26,12 +26,10 @@ def get_edge_lengths():
 
 
 def check(x):
-    a, b, c = x[0], x[1], x[2]
-    if a**2 + b**2 == c**2:
-        return True
-    elif b**2 + c**2 == a**2:
-        return True
-    elif a**2 + c**2 == b**2:
+    c = max(x)
+    x.remove(x[x.index(c)])
+    a, b = x[0],x[1]
+    if a** 2 + b ** 2 == c **2:
         return True
     else:
         return False
